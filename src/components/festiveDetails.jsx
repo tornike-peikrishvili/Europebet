@@ -4,6 +4,7 @@ import FirstStage from "./firstStage";
 import SecondStage from "./secondStage";
 import ThirdStage from "./thirdStage";
 import { Container } from "./header.jsx";
+import closeIcon from "../assets//close.png";
 
 function FestiveDetails() {
   const Date = ["28 ოქტ. - 7 ნოემ.", "10 - 29 დეკ.", "28 ოქტ. - 7 ნოემ."];
@@ -48,6 +49,9 @@ function FestiveDetails() {
           <GameName>სლოტები</GameName>
           <GameDate>10 სექტემბერი - 7 ნოემბერი</GameDate>
         </FirstRow>
+        <CloseBtn>
+          <CloseIcon src={closeIcon}></CloseIcon>
+        </CloseBtn>
         <SecondRow>მოიპოვე 10 საგზურიდან ერთ-ერთი</SecondRow>
         <ThirdRow>მოხვდი პოკერის ფესტივალზე მალტაში</ThirdRow>
       </DetailsText>
@@ -58,6 +62,31 @@ function FestiveDetails() {
 }
 
 export default FestiveDetails;
+
+const CloseBtn = styled.button`
+  display: none;
+  @media only screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: #25292b;
+    border-radius: 100%;
+    left: 74%;
+    top: 5%;
+    border: none;
+  }
+`;
+
+const CloseIcon = styled.img`
+  display: flex;
+  @media only screen and (min-width: 1024px) {
+    display: block;
+    width: 50%;
+  }
+`;
 
 const DetailsText = styled.div`
   width: 343px;
